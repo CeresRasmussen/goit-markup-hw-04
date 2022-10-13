@@ -220,6 +220,11 @@ ul {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
+.features-text {
+  font-size: 14px;
+  line-height: 1.71x;
+  letter-spacing: 0.03em;
+}
 
 .features-list {
   display: flex;
