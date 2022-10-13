@@ -11,6 +11,10 @@
   --hero-button-accent-color: #188ce8;
   --footer-address-link: rgba(255, 255, 255, 0.6);
   --header-border-color: #ececec;
+  --hero-background-color: #c4c4c4;
+  --icon-background-color: #f5f4fa;
+  --social-icon-color: #afb1b8;
+  --footer-background-item: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -64,7 +68,6 @@ ul {
 .navigation {
   display: flex;
   align-items: center;
-  margin-right: 344px;
 }
 
 .header-logo {
@@ -95,7 +98,9 @@ ul {
 }
 
 .header-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -107,12 +112,21 @@ ul {
 
 .contacts {
   display: flex;
+  margin-left: auto;
   gap: 50px;
+}
+
+.contacts .header-link {
+  color: var(--description-text-color);
 }
 
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-text-color);
+}
+
+.contacts-icon {
+  fill: currentColor;
 }
 
 .current {
@@ -127,8 +141,14 @@ ul {
 }
 
 .hero {
+  width: 1600px;
+  margin: 0 auto;
   padding: 200px 0;
-  background-color: var(--second-background-color);
+  background-color: var(--hero-background-color);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-title {
@@ -193,10 +213,9 @@ ul {
 }
 
 .features-title {
-  margin-top: 0;
   margin-bottom: 10px;
   font-size: 14px;
-  line-height: 1.19;
+  line-height: 1.14;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
@@ -207,8 +226,18 @@ ul {
   gap: 30px;
 }
 
-.feature-item {
-  width: 270px;
+.features-item {
+  max-width: 270px;
+}
+
+.features-icon {
+  height: 120px;
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--icon-background-color);
+  border-radius: 4px;
 }
 
 .works.section {
@@ -252,6 +281,7 @@ ul {
 }
 
 .team-text {
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -259,10 +289,57 @@ ul {
   text-align: center;
 }
 
+.team-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  fill: var(--social-icon-color);
+}
+.social-item:hover,
+.social-item:focus {
+  fill: var(--main-background-color);
+  background-color: var(--accent-text-color);
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.clients-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  border: 1px solid var(--social-icon-color);
+  fill: var(--social-icon-color);
+}
+
+.clients-item:hover,
+.clients-item:focus {
+  fill: var(--accent-text-color);
+  border-color: var(--accent-text-color);
+}
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--second-background-color);
+}
+.footer .container {
+  display: flex;
+  gap: 70px;
+  align-items: baseline;
 }
 
 .footer-logo {
@@ -295,10 +372,40 @@ ul {
   color: var(--accent-text-color);
 }
 
-.address {
+.local {
   color: var(--main-background-color);
   font-style: normal;
   letter-spacing: 0.03em;
+}
+
+.footer-social-title {
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--main-background-color);
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: var(--footer-background-item);
+  fill: var(--main-background-color);
+}
+
+.footer-social-item:hover,
+.footer-social-item:focus {
+  background-color: var(--accent-text-color);
 }
 
 /* Portfolio styles */
@@ -339,6 +446,12 @@ ul {
   /* gap: 30px 30px; */
   margin-bottom: -30px;
   margin-left: -30px;
+}
+
+.card-item:hover,
+.card-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .card-item {
